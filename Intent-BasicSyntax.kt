@@ -11,3 +11,13 @@ binding.btnCalculate.setOnClickListener {
             //send intent to launch Activity
             startActivity(intent)
         }
+
+//get value from another activity
+fun getKilometersHour(){
+        val bundle = intent.extras
+        val kilometersHour = bundle?.get("INTENT_NAME")
+
+        binding.tvResultScreen.text = kilometersHour.toString()
+
+    }
+//Note:            don't forget call the function from onCreate()
